@@ -73,7 +73,7 @@ st.sidebar.title("Carbon Emmision Prediction Web App")
         
 # S1.1: Add a multiselect widget to allow the user to select multiple visualisation.
 st.sidebar.subheader("Visuliazation Selector")
-plot_list = st.sidebar.multiselect('Select the Plots',("Corr_heatmap","line_chart",'area_chart','Count_plot','piechart','boxplot')) 
+plot_list = st.sidebar.multiselect('Select the Plots',("Corr_heatmap","line_chart",'area_chart','boxplot')) 
 if 'line_chart' in plot_list:
     st.subheader("Line Chart")  
     st.line_chart(glass_df) 
