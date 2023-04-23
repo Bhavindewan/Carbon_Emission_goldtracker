@@ -89,18 +89,18 @@ if "Corr_heatmap" in plot_list:
     sns.heatmap(glass_df.corr(),annot = True)
     st.pyplot()
 
-if 'Count_plot' in plot_list:
-    st.subheader("Count Plot")
-    plt.figure(figsize=(10,5))
-    sns.countplot(x = "GlassType",data = glass_df)
-    st.pyplot()
+#if 'Count_plot' in plot_list:
+    #st.subheader("Count Plot")
+    #plt.figure(figsize=(10,5))
+    #sns.countplot(x = "GlassType",data = glass_df)
+    #st.pyplot()
 
-if 'piechart' in plot_list:
-    count_glass = glass_df["GlassType"].value_counts()
-    st.subheader('Pie Chart')
-    plt.figure(figsize=(10,5))
-    plt.pie(count_glass,labels = count_glass.index,autopct = '%1.2f%%')
-    st.pyplot()      
+#if 'piechart' in plot_list:
+    #count_glass = glass_df["GlassType"].value_counts()
+    #st.subheader('Pie Chart')
+    #plt.figure(figsize=(10,5))
+    #plt.pie(count_glass,labels = count_glass.index,autopct = '%1.2f%%')
+    #st.pyplot()      
 if "boxplot" in plot_list:
     st.subheader("Box Plot")
     column = st.sidebar.selectbox("Select The Column for Box Plot",('Reuse', 'Recycle', 'Reduce', 'Water', 'Electricty', 'E-Cars', 'Bicycle', 'Paper', 'SolarPanels', 'Carbon Emmision'))
